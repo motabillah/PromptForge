@@ -861,3 +861,46 @@ body { display: flex; flex-direction: column; }
 
 /* Prevent select on all interactive node parts */
 .node-header, .node-name, .node-icon { user-select: none; }
+
+/* ── AD CONTAINER ─────────────────────────────────────────────────────────── */
+
+#ad-container {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1000;
+  width: 300px;
+  height: 250px;
+  background: #1a1a24;
+  border: 1px solid #2a2a38;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+#ad-label {
+  padding: 5px 10px 4px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #444;
+  border-bottom: 1px solid #2a2a38;
+  font-family: var(--font-ui);
+  flex-shrink: 0;
+}
+
+#ad-slot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 13px;
+  font-family: var(--font-ui);
+}
+
+@media (max-width: 600px) {
+  #ad-container { display: none; }
+}
